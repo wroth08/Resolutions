@@ -1,9 +1,11 @@
 <template>
   <div class="dash-menu">
-    <div class="menu-item">
-      <Icon name="dashboard"/>
-      <h2>Dashboard</h2>
-    </div>
+    <router-link to="/">
+      <div class="menu-item">
+        <Icon name="dashboard"/>
+        <h2>Dashboard</h2>
+      </div>
+    </router-link>
     <div class="drop">
       <div class="menu-item">
         <Icon name="bars"/>

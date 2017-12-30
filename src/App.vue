@@ -1,9 +1,11 @@
 <template>
   <div id="app">
     <div class="dashboard">
-      <Header/>
+      <Header v-bind:time="time"/>
       <DashMenu/>
-      <router-view v-bind:resolutions="resolutions"/>
+      <transition name="slide-fade">
+        <router-view v-bind:resolutions="resolutions"/>
+      </transition>
     </div>
   </div>
 </template>
@@ -11,6 +13,7 @@
 <script>
 import Header from './components/Header.vue'
 import DashMenu from './components/DashMenu.vue'
+var moment = require('moment')
 export default {
   name: 'app',
   components: {
@@ -19,10 +22,12 @@ export default {
   },
   created () {
     this.fetchdata()
+    this.setTime()
   },
   data () {
     return {
-      resolutions: []
+      resolutions: [],
+      time: ''
     }
   },
   methods: {
@@ -32,12 +37,28 @@ export default {
       .then((res) => {
         this.resolutions = res
       })
+    },
+    setTime () {
+      let time = moment()
+      let formattedTime = time.format('LL')
+      this.time = formattedTime
     }
   }
 }
 </script>
 
 <style>
+.slide-fade-enter-active {
+  transition: all .8s ease;
+}
+.slide-fade-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

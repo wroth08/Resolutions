@@ -1,6 +1,7 @@
 <template>
   <div class="dash-header">
     <h1>Resolutions</h1>
+    <h1>{{time}}</h1>
   </div>
 </template>
 
@@ -12,7 +13,8 @@ export default {
     }
   },
   components: {
-  }
+  },
+  props: ['time']
 }
 </script>
 
@@ -24,7 +26,9 @@ export default {
     background-color: black;
     color: white;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 </style>

@@ -1,46 +1,46 @@
 <template>
-  <div class="resolutions-list">
-    <h1>Daily</h1>
-    <template v-for="(object) in ResolutionsDaily">
-      <div v-bind:key="object.index" class="resolutions-list-item">
-        <div class="goal-name">
-          <h1>{{object.resolution_text}}</h1>
-          <h2>{{object.per}} Goal</h2>
+    <div class="resolutions-list">
+      <h1>Daily</h1>
+      <template v-for="(object) in ResolutionsDaily">
+        <div v-bind:key="object.index" class="resolutions-list-item">
+          <div class="goal-name">
+            <h1>{{object.resolution_text}}</h1>
+            <h2>{{object.per}} Goal</h2>
+          </div>
+          <h2>{{object.times_completed}} / {{object.times}}</h2>
         </div>
-        <h2>{{object.times_completed}} / {{object.times}}</h2>
-      </div>
-    </template>
-    <h1>Weekly</h1>
-    <template v-for="(object) in ResolutionsWeekly">
-      <div v-bind:key="object.index" class="resolutions-list-item">
-        <div class="goal-name">
-          <h1>{{object.resolution_text}}</h1>
-          <h2>{{object.per}} Goal</h2>
+      </template>
+      <h1>Weekly</h1>
+      <template v-for="(object) in ResolutionsWeekly">
+        <div v-bind:key="object.index" class="resolutions-list-item">
+          <div class="goal-name">
+            <h1>{{object.resolution_text}}</h1>
+            <h2>{{object.per}} Goal</h2>
+          </div>
+          <h2>{{object.times_completed}} / {{object.times}}</h2>
         </div>
-        <h2>{{object.times_completed}} / {{object.times}}</h2>
-      </div>
-    </template>
-    <h1>Monthly</h1>
-    <template v-for="(object) in ResolutionsMonthly">
-      <div v-bind:key="object.index" class="resolutions-list-item">
-        <div class="goal-name">
-          <h1>{{object.resolution_text}}</h1>
-          <h2>{{object.per}} Goal</h2>
+      </template>
+      <h1>Monthly</h1>
+      <template v-for="(object) in ResolutionsMonthly">
+        <div v-bind:key="object.index" class="resolutions-list-item">
+          <div class="goal-name">
+            <h1>{{object.resolution_text}}</h1>
+            <h2>{{object.per}} Goal</h2>
+          </div>
+          <h2>{{object.times_completed}} / {{object.times}}</h2>
         </div>
-        <h2>{{object.times_completed}} / {{object.times}}</h2>
-      </div>
-    </template>
-    <h1>Yearly</h1>
-    <template v-for="(object) in ResolutionsYearly">
-      <div v-bind:key="object.index" class="resolutions-list-item">
-        <div class="goal-name">
-          <h1>{{object.resolution_text}}</h1>
-          <h2>{{object.per}} Goal</h2>
+      </template>
+      <h1>Yearly</h1>
+      <template v-for="(object) in ResolutionsYearly">
+        <div v-bind:key="object.index" class="resolutions-list-item">
+          <div class="goal-name">
+            <h1>{{object.resolution_text}}</h1>
+            <h2>{{object.per}} Goal</h2>
+          </div>
+          <h2>{{object.times_completed}} / {{object.times}}</h2>
         </div>
-        <h2>{{object.times_completed}} / {{object.times}}</h2>
-      </div>
-    </template>
-  </div>
+      </template>
+    </div>
 </template>
 
 <script>
