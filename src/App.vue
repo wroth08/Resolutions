@@ -10,12 +10,10 @@
 
 <script>
 import Header from './components/Header.vue'
-import Dashboard from './components/Dashboard.vue'
 import DashMenu from './components/DashMenu.vue'
 export default {
   name: 'app',
   components: {
-    Dashboard,
     Header,
     DashMenu
   },

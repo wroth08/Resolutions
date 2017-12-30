@@ -72,10 +72,12 @@
         <h2>To Complete</h2>
       </div>
     </router-link>
-    <div class="menu-item">
-      <Icon name="check-circle"/>
-      <h2>Completed</h2>
-    </div>
+    <router-link to="/done">
+      <div class="menu-item">
+        <Icon name="check-circle"/>
+        <h2>Completed</h2>
+      </div>
+    </router-link>
     <div class="menu-item">
       <Icon name="gears"/>
       <h2>Manage Resolutions</h2>
