@@ -20,7 +20,7 @@ export default {
 <style scoped>
 .dash-header {
     grid-row: 1;
-    grid-column: 1 / 6;
+    grid-column: 1 / 9;
     background-color: black;
     color: white;
     display: flex;

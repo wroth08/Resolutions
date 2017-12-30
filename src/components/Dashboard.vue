@@ -40,7 +40,7 @@ a {
 .dashboard {
     width: 100vw;
     display: grid;
-    grid-template-columns: 10px 300px 1fr 1fr 1fr;
+    grid-template-columns: 10px 300px 1fr 1fr 1fr 1fr 1fr 10px;
     grid-template-rows: 100px 1fr 1fr 1fr;
     grid-gap: 10px;
 }

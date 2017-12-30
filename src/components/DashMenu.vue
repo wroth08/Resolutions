@@ -4,10 +4,6 @@
       <Icon name="dashboard"/>
       <h2>Dashboard</h2>
     </div>
-    <div class="menu-item">
-      <Icon name="calendar"/>
-      <h2>Calendar</h2>
-    </div>
     <div class="drop">
       <div class="menu-item">
         <Icon name="bars"/>
@@ -22,18 +18,67 @@
           <h2>Work</h2>
         </div>
         <div class="menu-item sub">
+          <Icon name="medkit"/>
+          <h2>Health</h2>
+        </div>
+        <div class="menu-item sub">
+          <Icon name="money"/>
+          <h2>Finances</h2>
+        </div>
+        <div class="menu-item sub">
+          <Icon name="gamepad"/>
+          <h2>Hobbies</h2>
+        </div>
+        <div class="menu-item sub">
           <Icon name="building"/>
           <h2>Personal</h2>
         </div>
+      </div>
+    </div>
+    <div class="drop">
+      <div class="menu-item">
+        <Icon name="calendar-check-o"/>
+        <div class="dropdown">
+          <h2>Goal Frequency</h2>  
+          <Icon name="chevron-down"/>
+        </div>
+      </div>
+      <div class="droplist">
         <div class="menu-item sub">
-          <Icon name="medkit"/>
-          <h2>Health</h2>
+          <div></div>
+          <h2>Daily</h2>
+        </div>
+        <div class="menu-item sub">
+          <div></div>
+          <h2>Weekly</h2>
+        </div>
+        <div class="menu-item sub">
+          <div></div>
+          <h2>Monthly</h2>
+        </div>
+        <div class="menu-item sub">
+          <div></div>
+          <h2>Yearly</h2>
         </div>
       </div>
     </div>
     <div class="menu-item">
-        <Icon name="calendar-check-o"/>
-        <h2>By Goal Frequency</h2>
+      <Icon name="calendar"/>
+      <h2>Calendar</h2>
+    </div>
+    <router-link to="/todo">
+      <div class="menu-item">
+        <Icon name="check-circle-o"/>
+        <h2>To Complete</h2>
+      </div>
+    </router-link>
+    <div class="menu-item">
+      <Icon name="check-circle"/>
+      <h2>Completed</h2>
+    </div>
+    <div class="menu-item">
+      <Icon name="gears"/>
+      <h2>Manage Resolutions</h2>
     </div>
   </div>
 </template>
@@ -67,7 +112,7 @@ li {
   margin: 0 10px;
 }
 a {
-  color: #1acedb;
+  text-decoration: none;
 }
 .fa-icon {
   width: auto;
@@ -82,7 +127,10 @@ a {
 .dash-menu {
     background-color: black;
     grid-column: 2;
-    grid-row: 2 / 4;
+    height:fit-content;
+    box-shadow: 5px 5px 5px 0px #052b2e;
+    -webkit-box-shadow: 5px 5px 5px 0px #052b2e;
+    -moz-box-shadow: 5px 5px 5px 0px #052b2e;
 }
 .menu-item {
   height: 40px;
@@ -112,6 +160,15 @@ a {
   background-color: black;
   padding: 5%;
   justify-content: space-between;
+  border-right: 10px solid #1acedb;
+  border-left: 10px solid #1acedb;
+}
+.drop > .droplist .sub {
+  border-right: 10px solid #1acedb;
+  border-left: 10px solid #1acedb;
+}
+.drop > .droplist .sub:hover {
+  background-color: rgb(63, 63, 63);
 }
 .drop:hover .droplist {
   max-height: 500px;
